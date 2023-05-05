@@ -9,5 +9,4 @@ interface Authentication {
      * @param headers Header parameters.
      */
     fun apply(query: MutableMap<String, List<String>>, headers: MutableMap<String, String>)
-
 }

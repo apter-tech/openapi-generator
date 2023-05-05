@@ -8,7 +8,6 @@ class HttpBearerAuth(private val scheme: String?) : Authentication {
         headers["Authorization"] = (if (scheme != null) upperCaseBearer(scheme)!! + " " else "") + token
     }
 
-    private fun upperCaseBearer(scheme: String): String? {
-        return if ("bearer".equals(scheme, ignoreCase = true)) "Bearer" else scheme
-    }
+    private fun upperCaseBearer(scheme: String): String? =
+        if ("bearer".equals(scheme, ignoreCase = true)) "Bearer" else scheme
 }
